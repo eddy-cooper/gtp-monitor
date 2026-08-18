@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ payload.site_name }} — Dashboard</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%232a78d6' d='M12 2C8 8 5 11.5 5 15a7 7 0 0 0 14 0c0-3.5-3-7-7-13z'/></svg>">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="shell topbar-inner">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C8 8 5 11.5 5 15a7 7 0 0 0 14 0c0-3.5-3-7-7-13z"/>
+      </svg>
+      <div>
+        <h1>{{ payload.site_name }}</h1>
+        <p class="subtitle">Water-balance monitoring &middot; as of <span id="today"></span></p>
+      </div>
+    </div>
+    <div id="alert-badge" class="badge" role="status"></div>
+  </div>
+</header>
+
+<main class="shell">
+  <div id="notice"></div>
+
+  <section id="tiles" class="tiles" aria-label="Key figures"></section>
+
+  <section class="card">
+    <div class="card-head">
+      <div>
+        <h2>FIT0101 under-reading trend</h2>
+        <p class="card-sub">Per balance period &middot; dashed lines mark the watch and action thresholds</p>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="trend-chart" aria-label="Under-reading trend chart"></canvas></div>
+    <p id="chart-key" class="chart-key hidden">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+      hollow point &mdash; period contains estimated data
+    </p>
+  </section>
+
+  <section class="card">
+    <div class="card-head row">
+      <h2>Records</h2>
+      <div class="segmented" id="table-picker" role="tablist">
+        <button data-table="readings" class="active" role="tab">Daily readings</button>
+        <button data-table="snapshots" role="tab">Snapshots</button>
+        <button data-table="balances" role="tab">Balance results</button>
+      </div>
+    </div>
+    <div class="table-scroll"><table id="data-table"></table></div>
+    <div class="table-foot">
+      <span id="table-count"></span>
+      <button id="show-all" class="linklike hidden">Show all</button>
+    </div>
+  </section>
+</main>
+
+<footer class="shell footer">
+  <div class="footer-actions">
+    <button id="refresh" class="btn primary">Refresh</button>
+    <button id="quit" class="btn">Quit server</button>
+  </div>
+  <p class="footnote">Read-only view &mdash; entries are made in the desktop app or CLI, which run the validation checks.</p>
+</footer>
+
+<script>window.__INITIAL__ = {{ payload | tojson }};</script>
+<script src="{{ url_for('static', filename='vendor/chart.umd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
