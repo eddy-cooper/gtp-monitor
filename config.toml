@@ -1,0 +1,52 @@
+# GTP Monitoring Tool — configuration
+# All volumes are kL unless noted. See docs/DATA_SPEC.md for the maths that
+# consumes these values.
+#
+# NOTE: this public repository ships a fully synthetic demo dataset. Every
+# value below (site name included) is invented; none belongs to any real
+# treatment plant.
+#
+# Chemical and plant parameters are re-estimated month to month. Changing
+# them here only affects new calculations — every balance_result row stores
+# the values in force at compute time, so past results stay reproducible
+# after this file changes.
+
+# Site display settings, used by the web dashboard. The site name lives
+# here (not in code) so the code stays site-agnostic.
+[site]
+display_name     = "Fairview Road Groundwater Treatment Plant"
+stale_entry_days = 3    # "Last entry" tile turns amber beyond this many days
+
+[chemicals]
+base_litres_per_batch = 3.10      # per reagent
+acid_factor           = 1.00
+ferrous_factor        = 0.95
+h2o2_factor           = 1.18
+caustic_factor        = 1.02
+
+[plant]
+batch_volume_kl       = 5.25
+max_daily_kl          = 58.0
+typical_daily_min_kl  = 28.0
+typical_daily_max_kl  = 48.0
+
+# Thresholds used by validate.py (DATA_SPEC.md §3). Referenced by rule
+# number in comments so they can be cross-checked against the spec.
+[validation]
+consecutive_freeze_days   = 3     # V6 — identical readings this many days running
+mains_increase_factor     = 3.0   # V9 — meter jump vs median of recent intervals
+mains_median_window       = 6     # V9 — number of past snapshot intervals in the median
+daily_imbalance_kl        = 15.0  # V12 — |in - out| flag threshold
+
+# Thresholds used by chart.py / status logic (DATA_SPEC.md §5).
+[alerts]
+action_pct           = 1.0    # under_pct above this -> ACTION
+watch_pct            = 0.5    # under_pct above this -> WATCH
+accelerating_factor  = 2.0    # under_pct more than this x the recent mean -> ACCELERATING
+accelerating_window  = 3      # number of previous periods averaged for the accelerating check
+investigate_pct      = -0.5   # under_pct below this -> INVESTIGATE (likely data error)
+
+# Where gtp status logs alert-worthy events. Lives in out/ since it's
+# generated/disposable, not source data.
+[logging]
+log_path = "out/alerts.log"
