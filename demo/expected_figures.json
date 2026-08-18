@@ -1,0 +1,167 @@
+{
+  "periods": {
+    "2025-10-01..2025-10-31": {
+      "period_start": "2025-10-01",
+      "period_end": "2025-10-31",
+      "total_in": 1224.1,
+      "total_out": 1232.6,
+      "mains_used": 5.099999999999909,
+      "chemicals_used": 3.2559974901960786,
+      "other_adjustments": 0.0,
+      "under_kl": 1.484002509804014,
+      "under_pct": 0.0012039611470095845,
+      "contains_estimates": false
+    },
+    "2025-11-01..2025-11-30": {
+      "period_start": "2025-11-01",
+      "period_end": "2025-11-30",
+      "total_in": 1192.0,
+      "total_out": 1204.4,
+      "mains_used": 4.800000000000182,
+      "chemicals_used": 3.1815052549019613,
+      "other_adjustments": 0.0,
+      "under_kl": 1.9284947450979475,
+      "under_pct": 0.0016012078587661468,
+      "contains_estimates": false
+    },
+    "2025-12-01..2025-12-31": {
+      "period_start": "2025-12-01",
+      "period_end": "2025-12-31",
+      "total_in": 1221.1,
+      "total_out": 1235.4,
+      "mains_used": 5.399999999999864,
+      "chemicals_used": 3.263393882352942,
+      "other_adjustments": 0.0,
+      "under_kl": 1.7266061176473761,
+      "under_pct": 0.0013976089668507172,
+      "contains_estimates": false
+    },
+    "2026-01-01..2026-01-31": {
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "total_in": 1135.8999999999999,
+      "total_out": 1146.5,
+      "mains_used": 5.0,
+      "chemicals_used": 3.0285584313725495,
+      "other_adjustments": 0.0,
+      "under_kl": 2.4114415686275867,
+      "under_pct": 0.002103307081227725,
+      "contains_estimates": false
+    },
+    "2026-02-01..2026-02-28": {
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "total_in": 0.0,
+      "total_out": 0.0,
+      "mains_used": 0.0,
+      "chemicals_used": 0.0,
+      "other_adjustments": 0.0,
+      "under_kl": 0.0,
+      "under_pct": null,
+      "contains_estimates": false
+    },
+    "2026-03-01..2026-03-31": {
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "total_in": 1213.0,
+      "total_out": 1225.0,
+      "mains_used": 5.600000000000136,
+      "chemicals_used": 3.2359215686274516,
+      "other_adjustments": 0.0,
+      "under_kl": 2.204078431372411,
+      "under_pct": 0.0017992476990795192,
+      "contains_estimates": false
+    },
+    "2026-04-01..2026-04-30": {
+      "period_start": "2026-04-01",
+      "period_end": "2026-04-30",
+      "total_in": 1190.6,
+      "total_out": 1201.4,
+      "mains_used": 4.899999999999864,
+      "chemicals_used": 2.944002095238096,
+      "other_adjustments": 0.0,
+      "under_kl": 2.885997904762222,
+      "under_pct": 0.0024021956923274694,
+      "contains_estimates": false
+    },
+    "2026-05-01..2026-05-31": {
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-31",
+      "total_in": 1232.6,
+      "total_out": 1241.5,
+      "mains_used": 5.2000000000000455,
+      "chemicals_used": 3.0422661904761914,
+      "other_adjustments": 0.0,
+      "under_kl": 3.7277338095238544,
+      "under_pct": 0.003002604759986995,
+      "contains_estimates": true
+    },
+    "2026-06-01..2026-06-30": {
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "total_in": 1212.3,
+      "total_out": 1228.1,
+      "mains_used": 4.7000000000000455,
+      "chemicals_used": 3.0094298095238097,
+      "other_adjustments": 0.0,
+      "under_kl": 4.6705701904760994,
+      "under_pct": 0.0038030862230079795,
+      "contains_estimates": false
+    },
+    "2026-07-01..2026-07-31": {
+      "period_start": "2026-07-01",
+      "period_end": "2026-07-31",
+      "total_in": 1213.7,
+      "total_out": 1227.7,
+      "mains_used": 5.5,
+      "chemicals_used": 3.008449619047619,
+      "other_adjustments": 0.0,
+      "under_kl": 6.3815503809523815,
+      "under_pct": 0.005197972127516805,
+      "contains_estimates": false
+    },
+    "2026-08-01..2026-08-14": {
+      "period_start": "2026-08-01",
+      "period_end": "2026-08-14",
+      "total_in": 536.5,
+      "total_out": 541.4,
+      "mains_used": 2.099999999999909,
+      "chemicals_used": 1.3266878095238097,
+      "other_adjustments": 2.5,
+      "under_kl": 5.033312190476257,
+      "under_pct": 0.00929684556792807,
+      "contains_estimates": true
+    }
+  },
+  "sheets": 11,
+  "days_total": 335,
+  "distinct_snapshots": 12,
+  "estimated_dates": [
+    "2026-05-12",
+    "2026-05-13",
+    "2026-08-09"
+  ],
+  "config_eras": {
+    "2025-10-01": {
+      "batch_volume_kl": 5.1,
+      "base": 3.2,
+      "acid": 1.0,
+      "ferrous": 0.92,
+      "h2o2": 1.24,
+      "caustic": 1.05
+    },
+    "2026-04-01": {
+      "batch_volume_kl": 5.25,
+      "base": 3.1,
+      "acid": 1.0,
+      "ferrous": 0.95,
+      "h2o2": 1.18,
+      "caustic": 1.02
+    }
+  },
+  "typo_snapshot": {
+    "taken_at": "2026-08-16T10:00:00",
+    "mains_meter": 1800.4,
+    "note": "site visit meter read"
+  }
+}
